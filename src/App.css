@@ -14,6 +14,10 @@ i{
     color: white;
 }
 
+.Navbar{
+   width: 100%;
+}
+
 .menu{
     width: 25%;
     height: 1200px;
@@ -68,7 +72,7 @@ i{
 .Input{
  margin: 0 auto;
  display: block;
-   
+
 }
 
 .Description{
@@ -358,9 +362,13 @@ i{
 }
 
 
-@media screen and (min-width: 335px){
+@media screen and (max-width: 360px){
 
       /*Navegacion  */
+
+      .Navbar{
+        width: 50%;
+     }
 
       .menu{
         width: 60%;

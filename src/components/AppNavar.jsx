@@ -31,7 +31,7 @@ const AppNavar = () => {
 
     return (
         <div className='Navegacion'>
-            <Navbar bg="dark" expand="lg" variant="dark">
+            <Navbar className='Navbar' bg="dark" expand="lg" variant="dark">
                 <Container>
                     <Navbar.Brand as={Link} to="/" >Home</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
