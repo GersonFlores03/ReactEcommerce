@@ -10,6 +10,7 @@ const Products = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    const [counter , setCounter] =useState(1)
     //const newFilterProducts = newProductss.filter(news => news.id !== Number(id))
 
     const newProducts = useSelector(state => state.newProducts)
@@ -25,6 +26,15 @@ const Products = () => {
     }, [id])
 
     console.log(isDetalles)
+
+    const increment = () =>{
+      setCounter(counter +1)
+    }
+
+    const Decrement = () =>{
+        setCounter(counter -1)
+    }
+    
 
     return (
         <div className='Contendor-Productos'>
@@ -62,7 +72,13 @@ const Products = () => {
                         </div>
                         <div>
                             <p>Quantity</p>
-                            <p><input type="number" /></p>
+                                 <button onClick={Decrement} disabled={counter === 1} >
+                                 <i className='bx bx-minus sumRes'></i> 
+                                 </button> 
+                                 <button className='Counter'> {counter} </button>
+                                 <button onClick={increment}>
+                                 <i className='bx bx-plus sumRes'></i> 
+                                </button> 
                         </div>
 
                     </div>

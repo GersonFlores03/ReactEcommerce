@@ -28,6 +28,23 @@ const Home = () => {
         <div className='Contenedor-General'>
 
             <div className='Input-Flex' >
+              <div className='Filter-Category'> 
+            <Accordion defaultActiveKey="0">
+                    <Accordion.Item eventKey="0">
+                        <Accordion.Header>Price</Accordion.Header>
+                        <Accordion.Body>
+                              From <input type="number" />
+                               <div> 
+                               To <input type="number" />
+                                </div>
+                                <div> 
+                                <button>Submit</button>
+                                </div>
+                        </Accordion.Body>
+                    </Accordion.Item>
+                </Accordion>
+
+
                 <Dropdown className='Categorys'>
 
                     <Dropdown.Toggle variant="secondary" id="dropdown-basic">
@@ -49,6 +66,10 @@ const Home = () => {
                     </Dropdown.Menu>
                 </Dropdown>
 
+                </div>
+
+               
+
                 <div className='Input-Contenedor'>
 
                     <InputGroup className="Input" size='sm' style={{ width: "80%" }}  >
@@ -59,7 +80,7 @@ const Home = () => {
                             value={isInnput} onChange={e => setIsInnput(e.target.value)}
                         />
                         <Button onClick={() => dispatch(getfilterthunkTitle(isInnput))} variant="danger" id="button-addon2">
-                        <i className='bx bx-search-alt-2'></i>
+                            <i className='bx bx-search-alt-2'></i>
                         </Button>
                     </InputGroup>
 
@@ -109,7 +130,7 @@ const Home = () => {
                     </section>
                     <section className='Redes'>
                         <section className='RedesSociales'>
-                         <a href="https://www.linkedin.com/in/gerson-flores-narciso-52628b256/"> <i className='bx bxl-linkedin bx-md' ></i>   </a>  
+                            <a href="https://www.linkedin.com/in/gerson-flores-narciso-52628b256/"> <i className='bx bxl-linkedin bx-md' ></i>   </a>
                         </section>
                         <section>
                             <i className='bx bxl-instagram-alt bx-md'></i>
