@@ -62,7 +62,7 @@ const Products = () => {
                         </div>
                         <div>
                             <p>Quantity</p>
-                            <p>Input</p>
+                            <p><input type="number" /></p>
                         </div>
 
                     </div>
