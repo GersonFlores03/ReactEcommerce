@@ -254,7 +254,7 @@ i{
 
   /*  Media queris  */
 
-  @media screen and (max-width:768px){
+  @media screen and (min-width:768px){
       
 
     /* Input y Card */
@@ -384,8 +384,11 @@ i{
 
       /* Input */
 
-      .Cards{
-        
+    .Cards{
+       display: block;
+    }
+    .Card{
+       
     }
 
     /* Products  */
