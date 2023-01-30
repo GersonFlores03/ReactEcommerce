@@ -363,7 +363,7 @@ i{
 
 
 
-@media screen and (max-width: 330px){
+@media screen and (max-width: 360px){
 
       /*Navegacion  */
 
@@ -371,7 +371,7 @@ i{
         width: 100%;
      }
 
-      .menu{
+     .menu{
         width: 60%;
         height: 1200px;
         z-index: 100;
@@ -379,6 +379,7 @@ i{
         right: 0;
         position: absolute;
         background-color: #f2eded;
+        display: none;
       }
 
       /* Input */
