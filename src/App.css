@@ -254,6 +254,8 @@ i{
 
   /*  Media queris  */
 
+ 
+
 
 
 
@@ -299,120 +301,15 @@ i{
     /* Products similares */
 
     .Productos-Similares{
-        display: block;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(1,1fr);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
     }
 
 
 }
-@media screen and (max-width:768px){
-      
 
-
-    /* Input y Card */
-    .Input-Flex{
-        display: block;
-        padding: 0;
-        gap: 0;
-    }
-
-    .Categorys{
-       display: flex;
-       align-items: center;
-       justify-content: flex-end;
-       margin-bottom: 20px;
-       top: 0;
-       
-    }
-
-    .Raya{
-      display: none;
-     }
-
-     .Cards{
-        display: block;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(2,1fr);
-     }
-
-     /* Navegacion  */
-
-     .menu{
-        width: 40%;
-        height: 1200px;
-        top: 0;
-        right: 0;
-        z-index: 100;
-        position: fixed;
-        background-color: #f2eded;
-       
-    }
-
-    /* Products  */
-
-    .FlexProductos{
-        display: flex;
-        align-items: center;
-        justify-content:space-around;
-        margin: 0 auto;
-        padding: 0;
-        gap: 0;
-        
-    }
-
-    .Boton{
-       display: flex;
-       align-items: center;
-       justify-content: flex-start;
-    }
-
-
-    .ButonComprar{
-        width: 300px;
-    }
-
-    .Caracteriticas{
-        width: 300px;
-       
-    }
-
-    .Carousel{
-        width: 400px;
-        
-    }
-
-    .Precio{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        gap: 5rem;
-    }
-
-    .Parrafo{
-        width: 300px;
-         
-    }
-    .Home{
-        padding: 1rem;
-        margin-left: 0;
-    }
-
-    /* Productos similares  */
-
-
-    .Productos-Similares{
-        display: block;
-        display: grid;
-        place-items: center;
-        grid-template-columns: repeat(2,1fr);
-
-    }
-
-  
-}
 
 
