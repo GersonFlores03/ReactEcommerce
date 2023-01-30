@@ -7,259 +7,112 @@
 
 /* Navegacion  */
 
-@media screen and (min-width: 1024px) {   
+   .Navbar{
+    width: 100%;
+   }
 
-a{
- text-decoration: none;
-}
-i{
-    color: white;
-}
-
-.Navbar{
-   width: 100%;
-}
-
-.menu{
-    width: 25%;
-    height: 1200px;
-    top: 92px;
-    right: 0;
-    z-index: 100;
-    position: absolute;
-    background-color: #f2eded;
+  .menu{
+     width: 60%;
+     height: 1200px;
+     z-index: 100;
+     top: 0;
+     right: 0;
+     position: absolute;
+     background-color: #f2eded;
     
-   
-}
+   }
 
-.hidden{
-    display: none;
-    color: black;
-}
-.TitleCarrito{
-    padding: 1rem;
-}
+   /* Input */
 
-.visible{
-    display: inherit;
-}
-
-/* Cards Grid  */
-
-.Cards{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    place-items: center;
-    padding: 2rem;
-    gap: 6rem;
-    
-}
-.Card{
-    border-radius: 10px;
-}
-
-
-.Cards-General{
-    width: 500px;
-}
-
-
-/* Hr  */
-.Raya{
-    width: 60%;
-}
-
-/* Inpunt  */
-
-
-.Input{
- margin: 0 auto;
- display: block;
-
-}
-
-.Description{
-    height: 50px;
-}
-
-.Precio{
-  margin: 20px auto;
-}
-/* Title    */
-.Title{
-    max-width: 100%;
-    font-size: 1rem;
-    object-fit: contain;
-}
-
-.Columna{
+ .Cards{
+    display: block;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.Input-Flex{
-    display: grid;
-    grid-template-columns:repeat(2,1fr);
-    padding: 3rem;
     gap: 1rem;
+ }
 
-  
-}
-
-
-/* Products  */
-
-
-.Carousel{
-    width: 500px;
-    height: 400px ;
-}
-
-.item{
-    padding: 1rem;
-}
-
-.item img{
-   width: 300px;
-   height: 340px;
-   margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   object-fit: contain;
-}
-
-.FlexProductos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5rem;
-    padding: 2.5rem;
-}
-
-.Parrafo{
-   width: 700px;
-}
-
-.Precio{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 500px;
-   
-}
-
-.Boton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.ButonComprar{
-    width: 700px;
-    height: 55px;
-    background-color:#f85555;
-    color: white;
-    border: 0;
-    cursor: pointer;
-}
-/* Productos similares   */
-
-.Productos-Similares{
-    display: grid;
-    place-items: center;
-    grid-template-columns: repeat(3,1fr);
-    gap: 4rem;
-    margin: 30px auto;
-   
-}
-
-.Similar{
-    border-radius: 10px;
-}
-
-.ParrafoItems{
-    padding: 1rem;
-    text-align: center;
-    color: #f85555;
-}
-
-.Home{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-left: 30px;
-    padding: 1.5rem;
-    text-decoration: none;
-  
-}
-
-.Punto i{
-     color: #f85555;
-}
-
-.AddCart{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: #f85555;
-    border: 0;
-  }
-
-  .Buton-precio{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* Footer  */
-
-
-  .Footer{
-    background-color: #515151;
-    padding: 80px  0;
-    color: white;
-    position: relative;
-    bottom: -164.8px;
-  }
-
-  .Contenedor-Footer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-   
+ .Input{
+     margin: 0 auto;
+     display: block;
+     margin-bottom: 20px;
     
+    }
+    .ButonComprar{
+     width: 700px;
+     height: 55px;
+     background-color:#f85555;
+     color: white;
+     border: 0;
+     cursor: pointer;
+ }
+ 
 
-  }
+ /* Products  */
+   
+ .FlexProductos{
+     display: block;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     gap: 1rem;
+ }
 
-  .Copyrigth{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+ /* Products similares */
+
+ .Footer{
+     background-color: #515151;
+     padding: 80px  0;
+     color: white;
+     position: relative;
+     bottom: -164.8px;
+   }
+ 
+   .Contenedor-Footer{
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     gap: 3rem;
     
-    
-  }
+     }
+ 
+   .Copyrigth{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+     
+     
+   }
+ 
+   .Redes{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 1rem;
+   }
+   .hidden{
+     display: none;
+     color: black;
+ }
+ .TitleCarrito{
+     padding: 1rem;
+ }
+ 
+ .visible{
+     display: inherit;
+ }
 
-  .Redes{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-  }
 
-}
+
 
 
 
   /*  Media queris  */
 
-  @media screen and (max-width: 768px){
+  @media screen and (min-width: 768px){
       
 
     /* Input y Card */
@@ -364,108 +217,253 @@ i{
 }
 
 
- @media screen and (max-width: 360px){
+ @media screen and (min-width: 1024px){
 
       /*Navegacion  */
 
-      .Navbar{
-       width: 100%;
-      }
-
-     .menu{
-        width: 60%;
-        height: 1200px;
-        z-index: 100;
-        top: 0;
-        right: 0;
-        position: absolute;
-        background-color: #f2eded;
+      a{
+        text-decoration: none;
+       }
+       i{
+           color: white;
+       }
        
-      }
-
-      /* Input */
-
-    .Cards{
-       display: block;
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       gap: 1rem;
-    }
-
-    .Input{
+       .Navbar{
+          width: 100%;
+       }
+       
+       .menu{
+           width: 25%;
+           height: 1200px;
+           top: 92px;
+           right: 0;
+           z-index: 100;
+           position: absolute;
+           background-color: #f2eded;
+           
+          
+       }
+       
+       .hidden{
+           display: none;
+           color: black;
+       }
+       .TitleCarrito{
+           padding: 1rem;
+       }
+       
+       .visible{
+           display: inherit;
+       }
+       
+       /* Cards Grid  */
+       
+       .Cards{
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           place-items: center;
+           padding: 2rem;
+           gap: 6rem;
+           
+       }
+       .Card{
+           border-radius: 10px;
+       }
+       
+       
+       .Cards-General{
+           width: 500px;
+       }
+       
+       
+       /* Hr  */
+       .Raya{
+           width: 60%;
+       }
+       
+       /* Inpunt  */
+       
+       
+       .Input{
         margin: 0 auto;
         display: block;
-        margin-bottom: 20px;
        
        }
-       .ButonComprar{
-        width: 700px;
-        height: 55px;
-        background-color:#f85555;
-        color: white;
-        border: 0;
-        cursor: pointer;
-    }
-    
-
-    /* Products  */
-      
-    .FlexProductos{
-        display: block;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    /* Products similares */
-
-    .Footer{
-        background-color: #515151;
-        padding: 80px  0;
-        color: white;
-        position: relative;
-        bottom: -164.8px;
-      }
-    
-      .Contenedor-Footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 3rem;
        
-        }
-    
-      .Copyrigth{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        
-        
-      }
-    
-      .Redes{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-      }
-      .hidden{
-        display: none;
-        color: black;
-    }
-    .TitleCarrito{
-        padding: 1rem;
-    }
-    
-    .visible{
-        display: inherit;
-    }
-    
+       .Description{
+           height: 50px;
+       }
+       
+       .Precio{
+         margin: 20px auto;
+       }
+       /* Title    */
+       .Title{
+           max-width: 100%;
+           font-size: 1rem;
+           object-fit: contain;
+       }
+       
+       .Columna{
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+       }
+       
+       .Input-Flex{
+           display: grid;
+           grid-template-columns:repeat(2,1fr);
+           padding: 3rem;
+           gap: 1rem;
+       
+         
+       }
+       
+       
+       /* Products  */
+       
+       
+       .Carousel{
+           width: 500px;
+           height: 400px ;
+       }
+       
+       .item{
+           padding: 1rem;
+       }
+       
+       .item img{
+          width: 300px;
+          height: 340px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          object-fit: contain;
+       }
+       
+       .FlexProductos{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 5rem;
+           padding: 2.5rem;
+       }
+       
+       .Parrafo{
+          width: 700px;
+       }
+       
+       .Precio{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+           width: 500px;
+          
+       }
+       
+       .Boton{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           padding: 1rem;
+       }
+       
+       .ButonComprar{
+           width: 700px;
+           height: 55px;
+           background-color:#f85555;
+           color: white;
+           border: 0;
+           cursor: pointer;
+       }
+       /* Productos similares   */
+       
+       .Productos-Similares{
+           display: grid;
+           place-items: center;
+           grid-template-columns: repeat(3,1fr);
+           gap: 4rem;
+           margin: 30px auto;
+          
+       }
+       
+       .Similar{
+           border-radius: 10px;
+       }
+       
+       .ParrafoItems{
+           padding: 1rem;
+           text-align: center;
+           color: #f85555;
+       }
+       
+       .Home{
+           display: flex;
+           align-items: center;
+           gap: 1rem;
+           margin-left: 30px;
+           padding: 1.5rem;
+           text-decoration: none;
+         
+       }
+       
+       .Punto i{
+            color: #f85555;
+       }
+       
+       .AddCart{
+           width: 50px;
+           height: 50px;
+           border-radius: 50%;
+           text-align: center;
+           background-color: #f85555;
+           border: 0;
+         }
+       
+         .Buton-precio{
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+         }
+       
+         /* Footer  */
+       
+       
+         .Footer{
+           background-color: #515151;
+           padding: 80px  0;
+           color: white;
+           position: relative;
+           bottom: -164.8px;
+         }
+       
+         .Contenedor-Footer{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           gap: 3rem;
+          
+           
+       
+         }
+       
+         .Copyrigth{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 1rem;
+           
+           
+         }
+       
+         .Redes{
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 1rem;
+         }
     
     }
 
