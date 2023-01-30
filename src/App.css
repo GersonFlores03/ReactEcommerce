@@ -369,8 +369,8 @@ i{
       /*Navegacion  */
 
       .Navbar{
-        width: 50%;
-     }
+       width: 100%;
+      }
 
      .menu{
         width: 60%;
@@ -380,13 +380,32 @@ i{
         right: 0;
         position: absolute;
         background-color: #f2eded;
-        display: none;
+       
       }
 
       /* Input */
 
     .Cards{
        display: block;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       gap: 1rem;
+    }
+
+    .Input{
+        margin: 0 auto;
+        display: block;
+        margin-bottom: 20px;
+       
+       }
+       .ButonComprar{
+        width: 700px;
+        height: 55px;
+        background-color:#f85555;
+        color: white;
+        border: 0;
+        cursor: pointer;
     }
     
 
@@ -403,16 +422,55 @@ i{
 
     /* Products similares */
 
-    .Productos-Similares{
+    .Footer{
+        background-color: #515151;
+        padding: 80px  0;
+        color: white;
+        position: relative;
+        bottom: -164.8px;
+      }
+    
+      .Contenedor-Footer{
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-
+        justify-content: center;
+        gap: 3rem;
+       
+        }
+    
+      .Copyrigth{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        
+        
+      }
+    
+      .Redes{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .hidden{
+        display: none;
+        color: black;
+    }
+    .TitleCarrito{
+        padding: 1rem;
+    }
+    
+    .visible{
+        display: inherit;
+    }
+    
+    
     }
 
 
-}
+
 
 
 
