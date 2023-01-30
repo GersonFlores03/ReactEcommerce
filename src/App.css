@@ -26,6 +26,7 @@ i{
     z-index: 100;
     position: absolute;
     background-color: #f2eded;
+    display: none;
    
 }
 
@@ -293,6 +294,7 @@ i{
         z-index: 100;
         position: fixed;
         background-color: #f2eded;
+        display: none;
        
     }
 
