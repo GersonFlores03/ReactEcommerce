@@ -384,9 +384,10 @@ i{
 
       .Cards{
           display: block;
-          display: grid;
-          place-items: center;
-          grid-template-columns: repeat(1 ,1fr);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
     }
 
     /* Products  */
