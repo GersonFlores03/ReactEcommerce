@@ -254,7 +254,7 @@ i{
 
   /*  Media queris  */
 
-  @media screen and (min-width:768px){
+  @media screen and (max-width: 768px){
       
 
     /* Input y Card */
@@ -278,7 +278,6 @@ i{
      }
 
      .Cards{
-        display: block;
         display: grid;
         place-items: center;
         grid-template-columns: repeat(2,1fr);
@@ -348,7 +347,7 @@ i{
     /* Productos similares  */
 
     .Productos-Similares{
-        display: block;
+        
         display: grid;
         place-items: center;
         grid-template-columns: repeat(2,1fr);
