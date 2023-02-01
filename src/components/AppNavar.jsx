@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Container, Nav, Navbar, NavDropdown, Offcanvas } from 'react-bootstrap';
+import { Link, useNavigate } from 'react-router-dom';
+import CartoffCanvas from './CartoffCanvas';
 
 
 
@@ -10,21 +11,20 @@ import { Link } from 'react-router-dom';
 
 const AppNavar = () => {
 
-    const [burgerClass, setBurgerClass] = useState("burger-bar unclicked")
-    const [menuClass, setMenuClass] = useState("menu hidden")
-    const [isMenuClicked, setIsMenuClicked] = useState(false)
 
 
-    const updateMenu = () => {
-        if (!isMenuClicked) {
-            setBurgerClass("burger-bar clicked")
-            setMenuClass("menu visible")
-        } else {
-            setBurgerClass("burger-bar unclicked")
-            setMenuClass("menu hidden")
-        }
+    const navigate = useNavigate();
 
-        setIsMenuClicked(!isMenuClicked)
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+
+
+    const logaut = () => {
+        localStorage.setItem("token", "")
+        navigate("/login")
     }
 
 
@@ -39,29 +39,14 @@ const AppNavar = () => {
                         <Nav className="me-auto">
                             <Nav.Link as={Link} to="/login" >Login</Nav.Link>
                             <Nav.Link as={Link} to="/purchases" >Purchases</Nav.Link>
-                            <Nav.Link >Cart</Nav.Link>
-                            <Nav.Link>
-                                <div className='Hamburguesa'>
-                                    <nav>
-                                        <div className='Burger-menu' onClick={updateMenu}>
-                                            <div className={burgerClass}> <i className='bx bx-shopping-bag'></i> </div>
-                                             
-
-                                        </div>
-                                    </nav>
-                                    <div className={menuClass}>
-                                        <h4 className='TitleCarrito'>
-                                        Carrito de Compras
-                                        </h4>
-                                    </div>
-                                </div>
-                            </Nav.Link>
+                            <Nav.Link onClick={handleShow}> Cart</Nav.Link>
+                            <Nav.Link onClick={logaut} >Log out</Nav.Link>
 
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
-
+             <CartoffCanvas show ={show} handleClose={handleClose}  />
 
         </div>
 
