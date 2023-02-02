@@ -4,10 +4,18 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #dfe5ec;
+}
+
 /* Navegacion  */
 
 .Navbar {
   width: 100%;
+}
+
+i {
+  color: white;
 }
 
 
@@ -44,12 +52,40 @@
   padding: 2rem;
   gap: 6rem;
 }
+.Card {
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  
+}
 
 .Input {
   margin: 0 auto;
   display: block;
   margin-bottom: 20px;
 }
+
+.InputPrice{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+ }
+ .Buton-input{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   padding: 1rem;
+   
+ }
+ .Buton-input button{
+   background-color: #f85555;
+   color: white;
+   border: 0;
+   border-radius: 5px;
+   width:100px;
+   height: 30px;
+ }
 
 
 
@@ -74,8 +110,11 @@
 }
 .Counter{
   width: 50px;
- 
-}
+ }
+
+ .ContadorCart{
+  width: 30px;
+ }
 
 /* Products similares */
 
@@ -153,17 +192,20 @@
   color: white;
   border: 0;
   cursor: pointer;
+  
 }
 .Buton-precio {
   display: flex;
   align-items: center;
   justify-content: space-between;
+ 
 }
 
 .Precio {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 .Buton {
   padding: 1rem;
@@ -201,8 +243,76 @@
   text-align: center;
   background-color: #f85555;
   border: 0;
+  position: relative;
+  left: 60px;
   
 }
+
+/* Purchases */
+
+.Contenedor-Purchases{
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(1,1fr);
+  gap: 2rem;
+ }
+
+ .Links{
+  text-decoration: none;
+}
+
+.Titulo-purchases{
+  padding: 3rem;
+  margin-bottom: 20px;
+}
+
+.CardPurchases{
+  border-radius: 10px;
+  box-shadow: rgb(237, 226, 226);
+}
+
+.Carrito{
+  margin-bottom: 50px;
+  
+}
+
+.FlexImgs{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 30px;
+}
+.Flex-Column{
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.Total{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.Trash{
+  border: 0;
+}
+
+.Trash i{
+  color: #f85555;
+}
+
+.listasCart{
+  list-style-type: none;
+}
+
+.img-cart{
+  width: 70px;
+}
+
+
 
 /*  Media queris  */
 
@@ -295,6 +405,65 @@
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /*Purchases */
+
+  .Contenedor-Purchases{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+   }
+  
+   .Links{
+    text-decoration: none;
+  }
+  
+  .Titulo-purchases{
+    padding: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .CardPurchases{
+    border-radius: 10px;
+    box-shadow: rgb(237, 226, 226);
+  }
+
+  .FlexImgs{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+  }
+  .Flex-Column{
+      display: flex;
+      flex-direction: column;
+     
+  }
+  
+  .Total{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    gap: 1rem;
+  }
+  
+  .Trash{
+    border: 0;
+  }
+  
+  .Trash i{
+    color: #f85555;
+  }
+  
+  .listasCart{
+    list-style-type: none;
+  }
+  
+  .img-cart{
+    width: 70px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -307,9 +476,7 @@
     color: white;
   }
 
-  .Navbar {
-    width: 100%;
-  }
+  
 
   .menu {
     width: 25%;
@@ -348,6 +515,8 @@
   
   .Card {
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+
   }
 
   .Cards-General {
@@ -389,9 +558,9 @@
   }
 
   .Input-Flex {
-   display: grid;
-   grid-template-columns: repeat(2,1fr);
-   padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem;
   }
 
   .Filter-Category{
@@ -479,6 +648,7 @@
 
   .Similar {
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   }
 
   .ParrafoItems {
@@ -546,4 +716,127 @@
     justify-content: center;
     gap: 1rem;
   }
+
+  /*Purchases */
+
+  .Contenedor-Purchases{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+   }
+
+
+  .Links{
+    text-decoration: none;
+  }
+
+  .Titulo-purchases{
+    padding: 3rem;
+    margin-bottom: 20px;
+  }
+
+  .CardPurchases{
+    border-radius: 10px;
+    box-shadow: rgb(237, 226, 226);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  }
+
+  .Acordion{
+    width: 300px;
+  }
+
+
+  .InputPrice{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: 10px;
+  }
+  .Buton-input{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
+    
+  }
+  .Buton-input button{
+    background-color: #f85555;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    width:100px;
+    height: 30px;
+  }
+   /* Input-Loding */
+
+   
+
+   .Contenedor-Formulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   
+   }
+
+   .Input-Registro{
+     padding: 4rem;
+     background-color: #fff;
+     width: 450px;
+     height: 400px;
+     display: block;
+     margin: 0 auto;
+     border-radius: 8px;
+     color: #1c1e21;
+     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+     
+    }
+
+    .Registro{
+        padding: 1rem;
+    }
+    /* Cart */
+
+    .img-cart{
+      width: 70px;
+    }
+
+    .Carrito{
+      margin-bottom: 50px;
+      
+    }
+
+    .FlexImgs{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 30px;
+    }
+    .Flex-Column{
+        display: flex;
+        flex-direction: column;
+       
+    }
+
+    .Total{
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 2rem;
+      gap: 1rem;
+    }
+
+    .Trash{
+      border: 0;
+    }
+
+    .Trash i{
+      color: #f85555;
+    }
+
+    .listasCart{
+      list-style-type: none;
+    }
 }

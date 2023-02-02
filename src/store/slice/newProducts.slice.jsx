@@ -29,10 +29,17 @@ export  const getFilterthunkName = (id) => (dispatch) => {
 }
 export const getfilterthunkTitle = (isInnput) => (dispatch) => {
     dispatch(setloadings(true));
-       axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/products/?title=${isInnput} `)
+       axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/products?title=${isInnput} `)
         .then(res => dispatch(setProducts(res.data)))
         .finally(() => dispatch(setloadings(false)));
 }
+
+ export const getPricethunkName = (isprice) => (dispatch) => {
+     dispatch(setloadings(true));
+         axios.get(`https://e-commerce-api-v2.academlo.tech/api/v1/products?price=${isprice} `)
+         .then(res => dispatch(setProducts(res.data)))
+         .finally(() => dispatch(setloadings(false)));
+ }
 
 export const { setProducts } = newProducts.actions;
 

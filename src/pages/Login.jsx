@@ -6,53 +6,74 @@ import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
-      const {register , handleSubmit} = useForm();
+    const { register, handleSubmit } = useForm();
 
-      const navigate = useNavigate();
+    const navigate = useNavigate();
 
-      const submit = (data) =>{
-           console.log(data)
-           axios.post(`https://e-commerce-api-v2.academlo.tech/api/v1/users/login` , data)
-           .then(res =>{
-            
-            localStorage.setItem("token" , res.data.token)
-            navigate("/")
-           })
-           .catch(error => {
-               if(error.response.status === 401){
+    const submit = (data) => {
+        console.log(data)
+        axios.post(`https://e-commerce-api-v2.academlo.tech/api/v1/users/login`, data)
+            .then(res => {
+
+                localStorage.setItem("token", res.data.token)
+                navigate("/")
+            })
+            .catch(error => {
+                if (error.response.status === 401) {
                     alert("Credencial Incorrecta")
-               }
-               console.log(error)
-           })
-      }
+                }
+                console.log(error)
+            })
+    }
 
 
     return (
-        
-            <Form onSubmit={handleSubmit(submit)}>
-                <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email address</Form.Label>
-                    <Form.Control type="email" placeholder="Enter email" 
-                     {...register("email")}  />
-                    
-                    <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                    </Form.Text>
-                </Form.Group>
 
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>Password</Form.Label>
-                    <Form.Control type="password" placeholder="Password" 
-                      {...register("password")}   />
-                </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                    <Form.Check type="checkbox" label="Check me out" />
-                </Form.Group>
-                <Button variant="primary" type="submit">
-                    Submit
-                </Button>
-            </Form>
-        
+        <>
+            <h1 className='Registro'>Registro</h1>
+
+            <div className='Input-Registro'>
+
+
+
+                <Form className='Contenedor-Formulario' onSubmit={handleSubmit(submit)}>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control className='Barra-Input' style={{ width: "25rem" }} type="email" placeholder="Enter email"
+                            {...register("email")} />
+
+
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                        <Form.Label>Password</Form.Label>
+                        <Form.Control className='Barra-Input' style={{ width: "25rem" }} type="password" placeholder="Password"
+                            {...register("password")} />
+                    </Form.Group>
+
+                    <Button variant="primary" type="submit">
+                        Submit
+                    </Button>
+                </Form>
+            </div>
+            <footer className='Footer'>
+                <div className='Contenedor-Footer'>
+                    <section className='Copyrigth'>
+                        <p> <i className='bx bx-copyright bx-sm'></i> </p>
+
+                        <p>Gerson Elmer Flores Narciso</p>
+                    </section>
+                    <section className='Redes'>
+                        <section className='RedesSociales'>
+                            <i className='bx bxl-linkedin bx-md' ></i>
+                        </section>
+                        <section>
+                            <i className='bx bxl-instagram-alt bx-md'></i>
+                        </section>
+                    </section>
+                </div>
+            </footer>
+        </>
     );
 };
 

@@ -3,12 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { Accordion, Button, Card, Dropdown, Form, InputGroup, ListGroup } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getFilterthunkName, getfilterthunkTitle, getProductsThank } from '../store/slice/newProducts.slice';
+import { getFilterthunkName, getfilterthunkTitle, getPricethunkName, getProductsThank } from '../store/slice/newProducts.slice';
 
 
 const Home = () => {
     const [category, setCategory] = useState([])
     const [isInnput, setIsInnput] = useState("")
+    const [isprice, setIsprice] = useState("")
 
 
 
@@ -23,23 +24,29 @@ const Home = () => {
     }, [])
 
     console.log(category)
-
+   
     return (
         <div className='Contenedor-General'>
 
             <div className='Input-Flex' >
               <div className='Filter-Category'> 
-            <Accordion defaultActiveKey="0">
+            <Accordion className='Acordion' defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>Price</Accordion.Header>
                         <Accordion.Body>
-                              From <input type="number" />
+                              
+                              From <input className='InputPrice' type="text"
+                              value={isprice} onChange={ e=>setIsprice(e.target.value)}
+                              />
                                <div> 
-                               To <input type="number" />
+                               To <input className='InputPrice' type="text"
+                               
+                                />
                                 </div>
-                                <div> 
-                                <button>Submit</button>
+                                <div className='Buton-input'> 
+                                <button onClick={() => dispatch(getPricethunkName(isprice))}> Submit </button>
                                 </div>
+                               
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
@@ -51,7 +58,7 @@ const Home = () => {
                         Category
 
                     </Dropdown.Toggle>
-                    <hr className='Raya' />
+                    <hr className='Raya'/>
 
                     <Dropdown.Menu>
 
@@ -72,14 +79,14 @@ const Home = () => {
 
                 <div className='Input-Contenedor'>
 
-                    <InputGroup className="Input" size='sm' style={{ width: "80%" }}  >
+                    <InputGroup className="Input" size='md' style={{ width: "80%" }}  >
                         <Form.Control
                             placeholder="Find your Products"
                             aria-label="Recipient's username"
                             aria-describedby="basic-addon2"
                             value={isInnput} onChange={e => setIsInnput(e.target.value)}
                         />
-                        <Button onClick={() => dispatch(getfilterthunkTitle(isInnput))} variant="danger" id="button-addon2">
+                        <Button onClick={() => dispatch(getfilterthunkTitle(isInnput))} variant="danger" id="button-addon2" size='md'>
                             <i className='bx bx-search-alt-2'></i>
                         </Button>
                     </InputGroup>
@@ -88,23 +95,20 @@ const Home = () => {
                         {
                             newProducts.map(news => (
                                 <div className='CardsComponentes' key={news.id} onClick={() => navigate(`/product/${news.id}`)} >
-                                    <Card className='Card' style={{ width: '18rem' }}>
-                                        <Card.Img variant="top" src={news.images?.[0].url} style={{ width: "150px", height: "160px", objectFit: "contain", margin: "0 auto", padding: "1rem" }} />
+                                    <Card className='Card' style={{ width: '18rem' , height:"23rem" }}>
+                                        <Card.Img variant="top" src={news.images?.[0].url} 
+                                        style={{ width: "150px", height: "160px", objectFit: "contain", margin: "0 auto", padding: "1rem" }} />
+                                        <hr />
                                         <Card.Body>
                                             <Card.Title> {news.brand}  </Card.Title>
                                             <Card.Text className='Title'>
-                                                <div className='Columna'>
-                                                    <section>
-                                                        <p className='Description'> {news.title}</p>
-                                                    </section>
-                                                    <section className='Precio'>
-                                                        Price: ${news.price}
-                                                    </section>
-                                                </div>
+                                                {news.title}
+                                                <br />
+                                                 Price $:
+                                               {news.price}
+                                               <button className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
                                             </Card.Text>
-                                            <div>
-                                                <button className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
-                                            </div>
+                                            
 
                                         </Card.Body>
                                     </Card>
