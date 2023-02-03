@@ -11,6 +11,8 @@ const Home = () => {
     const [isInnput, setIsInnput] = useState("")
     const [isprice, setIsprice] = useState("")
 
+    
+
 
 
     const dispatch = useDispatch();

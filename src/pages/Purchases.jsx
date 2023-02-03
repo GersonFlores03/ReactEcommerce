@@ -22,17 +22,17 @@ const Purchases = () => {
                 {
                     purchases.map(purcha => (
                         <div key={purcha.id}>
-                            <Link className='Links' to={`/product/${purcha.product.id}`}>
+                            <Link className='Links' to={`/product/${purcha.product?.id}`}>
                                 <Card className='CardPurchases' style={{ width: '18rem', height: "20rem" }}>
-                                    <Card.Img className='img-purchases' variant="top" src={purcha.product.images?.[0].url}
+                                    <Card.Img className='img-purchases' variant="top" src={purcha.product?.images?.[0].url}
                                         style={{ width: "150px", height: "160px", objectFit: "contain", margin: "0 auto", padding: "1rem" }}
                                     />
                                     <hr />
                                     <Card.Body>
-                                        <Card.Title>{purcha.product.brand}</Card.Title>
+                                        <Card.Title>{purcha.product?.brand}</Card.Title>
                                         <Card.Text>
-                                            {purcha.product.title}
-                                             {purcha.product.userId} 
+                                            {purcha.product?.title}
+                                             {purcha.product?.userId} 
 
                                         </Card.Text>
                                     </Card.Body>

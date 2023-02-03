@@ -44,6 +44,14 @@ export const getDeletethunkName = (id) => (dispatch) => {
         .finally(() => dispatch(setloadings(false)));
 }
 
+export const ModificarthunkName = (id , quantity) => (dispatch) => {
+    dispatch(setloadings(true));
+    const body = {quantity:quantity}
+    return axios.put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}/`, body , getConfig() )
+        .then(() => dispatch(getCartProductsthunkName))
+        .finally(() => dispatch(setloadings(false)));
+}
+
 export const { setCartProduct  } = cartProductSlice.actions;
 
 export default cartProductSlice.reducer;

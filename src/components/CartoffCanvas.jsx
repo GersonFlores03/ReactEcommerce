@@ -3,30 +3,21 @@ import React, { useEffect, useState } from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { getCartProductsthunkName, getcheckthunkName, getDeletethunkName } from '../store/slice/cartProduct.slice';
+import { getCartProductsthunkName, getcheckthunkName, getDeletethunkName, ModificarthunkName } from '../store/slice/cartProduct.slice';
 
 
 const CartoffCanvas = ({ show, handleClose }) => {
-    const [counterNumber, setCounterNumber] = useState(1)
-
-    //const [deleteProduct , setDeleteProduct] = useState({})
-
-
-    //const {id} = useParams()
+    
 
 
 
     const cartProduct = useSelector(state => state.cartProduct)
 
-    /*useEffect(()=>{
-        axios.delete(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`)
-        .then(res =>{
-            setDeleteProduct(res.data)
-            dispatch(getDeletethunkName(res.data.id))
-        } )
-    },[id])*/
-
-    //console.log(deleteProduct)
+    let total = 0
+    cartProduct.forEach(product =>{
+        const productoTotal = Number(product.product.price) * product.quantity;
+        total += productoTotal
+    })
 
 
 
@@ -38,14 +29,14 @@ const CartoffCanvas = ({ show, handleClose }) => {
 
     console.log(cartProduct)
 
-    const incrementNumber = () => {
-        setCounterNumber(counterNumber + 1)
+    const incrementNumber = (cart) => {
+        dispatch(ModificarthunkName(cart.id , cart.quantity + 1))
 
 
     }
 
-    const decrementNumber = () => {
-        setCounterNumber(counterNumber - 1)
+    const decrementNumber = (cart) => {
+        dispatch(ModificarthunkName(cart.id , cart.quantity -1))
     }
 
     /*const totalProduct = () =>{
@@ -63,7 +54,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
                     <ul className='ScrollCart'>
                         {
                             cartProduct.map(cart => (
-                                <div className='listasCart' key={cart.id}>
+                                <li className='listasCart' key={cart.id}>
 
                                     <div className='Carrito'>
 
@@ -72,7 +63,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
                                             <div className='Flex-Column'>
                                                 <h5> {cart.product.brand} </h5>
                                                 <div>
-                                                    <button className='ContadorCart' disabled={counterNumber === 1} onClick={decrementNumber}> - </button><button className='Counter'> {counterNumber}</button><button className='ContadorCart' onClick={incrementNumber}> + </button>
+                                                    <button className='ContadorCart'  onClick={()=> (decrementNumber(cart))}> - </button> <button className='Counter'> {cart.quantity} </button><button className='ContadorCart' onClick={()=> incrementNumber(cart)}> + </button>
                                                 </div>
 
                                             </div>
@@ -89,7 +80,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
 
                                     </div>
                                     
-                                </div>
+                                </li>
                                 
                             ))
                         }
@@ -97,8 +88,8 @@ const CartoffCanvas = ({ show, handleClose }) => {
                     <hr />
                     <div className='Section-Buton'>
                     <div className='Total-Final'>
-                            <p>Total</p>
-                            <p>$ {counterNumber} </p>
+                            <p>Total:</p>
+                            <p>$ {total} </p>
                            
                          </div>
                          <div className='Buton-COT'>  
