@@ -51,9 +51,15 @@ const Login = () => {
                             {...register("password")} />
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button className='Buton-login' variant="primary" type="submit">
                         Submit
                     </Button>
+                    <div className='test'>
+                         <h5 className='Tes-data'>Test data</h5>
+                        
+                         <p>john@gmail.com</p>
+                         <p>john1234</p>   
+                    </div>
                 </Form>
             </div>
             <footer className='Footer'>

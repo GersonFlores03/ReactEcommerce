@@ -357,7 +357,7 @@ i {
    padding: 4rem;
    background-color: #fff;
    width: 300px;
-   height: 400px;
+   height: 500px;
    display: block;
    margin: 0 auto;
    border-radius: 8px;
@@ -369,6 +369,27 @@ i {
   .Registro{
       padding: 1rem;
   }
+
+  .test{
+    padding: 1rem;
+    background-color: #fb6d6d;
+    width: 250px;
+    border-radius: 8px;
+    height: 150px;
+  
+  }
+  .test p{
+    margin-left: 30px;
+  }
+
+  .Tes-data{
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .Buton-login{
+    margin-bottom: 20px;
+  }
+    
 
   
 
@@ -845,7 +866,7 @@ i {
      padding: 4rem;
      background-color: #fff;
      width: 450px;
-     height: 400px;
+     height: 500px;
      display: block;
      margin: 0 auto;
      border-radius: 8px;
@@ -928,6 +949,27 @@ i {
       border: 0;
       background-color: #f85555;
       color: white;
+    }
+
+    .Buton-login{
+      margin-bottom: 20px;
+    }
+
+    .test{
+      padding: 1rem;
+      background-color: #fb6d6d;
+      width: 400px;
+      border-radius: 8px;
+      height: 150px;
+    
+    }
+    .test p{
+      margin-left: 30px;
+    }
+
+    .Tes-data{
+      margin-bottom: 20px;
+      text-align: center;
     }
       
 }
