@@ -28,7 +28,7 @@ const Products = () => {
 
     }, [id])
 
-    console.log(isDetalles)
+    //console.log(isDetalles)
 
     const increment = () => {
         setCounter(counter + 1)

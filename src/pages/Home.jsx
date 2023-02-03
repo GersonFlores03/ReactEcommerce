@@ -25,7 +25,7 @@ const Home = () => {
             .then(res => setCategory(res.data))
     }, [])
 
-    console.log(category)
+    //console.log(category)
 
     /*const HomeAddCart = (id) => {
         const producto = {
@@ -112,11 +112,15 @@ const Home = () => {
                                         <Card.Body>
                                             <Card.Title> {news.brand}  </Card.Title>
                                             <Card.Text className='Title'>
+                                                <div className='Description'>  
                                                 {news.title}
+                                                </div>
                                                 <br />
                                                  Price $:
+                                                <div className='Price-Buton'>  
                                                {news.price}
                                                <button  className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
+                                               </div>
                                             </Card.Text>
                                             
 

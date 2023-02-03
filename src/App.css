@@ -372,7 +372,7 @@ i {
 
   .test{
     padding: 1rem;
-    background-color: #fb6d6d;
+    background-color: #f29b9b;
     width: 250px;
     border-radius: 8px;
     height: 150px;
@@ -630,6 +630,12 @@ i {
     font-size: 1rem;
     object-fit: contain;
   }
+
+  .Price-Buton{
+    background-color: #f85555;
+  }
+
+  
 
   .Columna {
     display: flex;
@@ -957,7 +963,7 @@ i {
 
     .test{
       padding: 1rem;
-      background-color: #fb6d6d;
+      background-color: #f29b9b;
       width: 400px;
       border-radius: 8px;
       height: 150px;

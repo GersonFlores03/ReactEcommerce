@@ -47,8 +47,9 @@ export const getDeletethunkName = (id) => (dispatch) => {
 export const ModificarthunkName = (id , quantity) => (dispatch) => {
     dispatch(setloadings(true));
     const body = {quantity:quantity}
+    console.log(body)
     return axios.put(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}/`, body , getConfig() )
-        .then(() => dispatch(getCartProductsthunkName))
+        .then(() => dispatch(getCartProductsthunkName()))
         .finally(() => dispatch(setloadings(false)));
 }
 

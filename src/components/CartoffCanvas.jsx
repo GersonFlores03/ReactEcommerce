@@ -39,9 +39,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
         dispatch(ModificarthunkName(cart.id , cart.quantity -1))
     }
 
-    /*const totalProduct = () =>{
-         
-    }*/
+    
 
     return (
         <div>

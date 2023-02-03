@@ -14,7 +14,7 @@ const Purchases = () => {
         dispatch(getPurchasesthunkName())
     }, [])
 
-    console.log(purchases)
+    //console.log(purchases)
     return (
         <div>
             <h1 className='Titulo-purchases'>My Purchases</h1>

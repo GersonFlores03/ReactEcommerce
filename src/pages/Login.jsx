@@ -57,8 +57,8 @@ const Login = () => {
                     <div className='test'>
                          <h5 className='Tes-data'>Test data</h5>
                         
-                         <p>john@gmail.com</p>
-                         <p>john1234</p>   
+                         <p> <i className='bx bx-envelope'></i> john@gmail.com</p>
+                         <p> <i className='bx bx-lock-alt'></i> john1234</p>   
                     </div>
                 </Form>
             </div>
@@ -67,7 +67,7 @@ const Login = () => {
                     <section className='Copyrigth'>
                         <p> <i className='bx bx-copyright bx-sm'></i> </p>
 
-                        <p>Gerson Elmer Flores Narciso</p>
+                        <p>  Gerson Elmer Flores Narciso</p>
                     </section>
                     <section className='Redes'>
                         <section className='RedesSociales'>
