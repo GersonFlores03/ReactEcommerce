@@ -130,7 +130,7 @@ const Products = () => {
                                         Precio $:
                                         {isnew.price}
 
-                                        <button className='AddCart'> <i className='bx bx-cart bx-sm' ></i></button>
+                                        <button className='AddCartProduct'> <i className='bx bx-cart bx-sm' ></i></button>
 
                                     </Card.Text>
 

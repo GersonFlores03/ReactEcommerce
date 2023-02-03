@@ -113,12 +113,13 @@ const Home = () => {
                                             <Card.Title> {news.brand}  </Card.Title>
                                             <Card.Text className='Title'>
                                                 <div className='Description'>  
-                                                {news.title}
+                                                <p className='Parrafo-home'>{news.title} </p>
+                                             
                                                 </div>
-                                                <br />
+                                                
                                                  Price $:
                                                 <div className='Price-Buton'>  
-                                               {news.price}
+                                               <b> {news.price} </b> 
                                                <button  className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
                                                </div>
                                             </Card.Text>

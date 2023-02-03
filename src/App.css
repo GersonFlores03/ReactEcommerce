@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: #dfe5ec;
 }
 
@@ -17,24 +17,20 @@ body{
 i {
   color: white;
 }
-.TitleNavar{
-    color: #f85555;
+.TitleNavar {
+  color: #f85555;
 }
 
-
-.Filter-Category{
+.Filter-Category {
   display: flex;
- flex-direction: column;
+  flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 10px;
-  
 }
-.Categorys{
+.Categorys {
   margin-bottom: 20px;
 }
-
-
 
 .menu {
   width: 60%;
@@ -58,7 +54,6 @@ i {
 .Card {
   border-radius: 10px;
   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-  
 }
 
 .Input {
@@ -67,57 +62,52 @@ i {
   margin-bottom: 20px;
 }
 
-.InputPrice{
+.InputPrice {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
   margin-bottom: 10px;
- }
- .Buton-input{
-   display: flex;
-   align-items: center;
-   justify-content: flex-end;
-   padding: 1rem;
-   
- }
- .Buton-input button{
-   background-color: #f85555;
-   color: white;
-   border: 0;
-   border-radius: 5px;
-   width:100px;
-   height: 30px;
- }
-
-
+}
+.Buton-input {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 1rem;
+}
+.Buton-input button {
+  background-color: #f85555;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  width: 100px;
+  height: 30px;
+}
 
 /* Products  */
 
 .Carousel {
-    width: 300px;
-    height: 400px;
-  }
-
-  
+  width: 300px;
+  height: 400px;
+}
 
 .FlexProductos {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.sumRes{
+.sumRes {
   color: black;
 }
-.Counter{
+.Counter {
   width: 50px;
- }
+}
 
- .ContadorCart{
+.ContadorCart {
   width: 30px;
- }
+}
 
 /* Products similares */
 
@@ -195,13 +185,11 @@ i {
   color: white;
   border: 0;
   cursor: pointer;
-  
 }
 .Buton-precio {
   display: flex;
   align-items: center;
   justify-content: space-between;
- 
 }
 
 .Precio {
@@ -239,7 +227,7 @@ i {
   color: #f85555;
 }
 
-.AddCart {
+.AddCartProduct {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -248,50 +236,65 @@ i {
   border: 0;
   position: relative;
   left: 60px;
-  
 }
+.AddCart{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #f85555;
+  border: 0;
+}
+.Price-Buton {
+  justify-content: space-between;
+   display: flex;
+  align-items: center;
+}
+
+.Parrafo-home {
+  font-size: 12px;
+}
+
 
 /* Purchases */
 
-.Contenedor-Purchases{
+.Contenedor-Purchases {
   display: grid;
   place-items: center;
-  grid-template-columns: repeat(1,1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
- }
+}
 
- .Links{
+.Links {
   text-decoration: none;
 }
 
-.Titulo-purchases{
+.Titulo-purchases {
   padding: 3rem;
   margin-bottom: 20px;
 }
 
-.CardPurchases{
+.CardPurchases {
   border-radius: 10px;
   box-shadow: rgb(237, 226, 226);
 }
 
-.Carrito{
+.Carrito {
   margin-bottom: 50px;
-  
 }
 
-.FlexImgs{
+.FlexImgs {
   display: flex;
   align-items: center;
   gap: 1rem;
   margin-bottom: 30px;
 }
-.Flex-Column{
-    display: flex;
-    flex-direction: column;
-   
+.Flex-Column {
+  display: flex;
+  flex-direction: column;
 }
 
-.Total{
+.Total {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -299,44 +302,42 @@ i {
   gap: 1rem;
 }
 
-.Trash{
+.Trash {
   border: 0;
 }
 
-.Trash i{
+.Trash i {
   color: #f85555;
 }
 
-.listasCart{
+.listasCart {
   list-style-type: none;
 }
 
-.img-cart{
+.img-cart {
   width: 70px;
 }
 
-.ScrollCart{
+.ScrollCart {
   overflow-y: scroll;
   height: 400px;
-  }
+}
 
-
-.Total-Final{
+.Total-Final {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
 
-.Buton-Comprar{
+.Buton-Comprar {
   width: 200px;
   height: 40px;
   border: 0;
   background-color: #f85555;
   color: white;
-  
 }
 
-.Buton-COT{
+.Buton-COT {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -344,56 +345,47 @@ i {
 
 /*Input Loding  */
 
-.Contenedor-Formulario{
+.Contenedor-Formulario {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
- 
- }
+}
 
- .Input-Registro{
-   padding: 4rem;
-   background-color: #fff;
-   width: 300px;
-   height: 500px;
-   display: block;
-   margin: 0 auto;
-   border-radius: 8px;
-   color: #1c1e21;
-   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-   
-  }
+.Input-Registro {
+  padding: 4rem;
+  background-color: #fff;
+  width: 300px;
+  height: 500px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  color: #1c1e21;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+}
 
-  .Registro{
-      padding: 1rem;
-  }
+.Registro {
+  padding: 1rem;
+}
 
-  .test{
-    padding: 1rem;
-    background-color: #f29b9b;
-    width: 250px;
-    border-radius: 8px;
-    height: 150px;
-  
-  }
-  .test p{
-    margin-left: 30px;
-  }
+.test {
+  padding: 1rem;
+  background-color: #f29b9b;
+  width: 250px;
+  border-radius: 8px;
+  height: 150px;
+}
+.test p {
+  margin-left: 30px;
+}
 
-  .Tes-data{
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  .Buton-login{
-    margin-bottom: 20px;
-  }
-    
-
-  
-
-
+.Tes-data {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.Buton-login {
+  margin-bottom: 20px;
+}
 
 /*  Media queris  */
 
@@ -489,60 +481,59 @@ i {
 
   /*Purchases */
 
-  .Contenedor-Purchases{
+  .Contenedor-Purchases {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-   }
-  
-   .Links{
+  }
+
+  .Links {
     text-decoration: none;
   }
-  
-  .Titulo-purchases{
+
+  .Titulo-purchases {
     padding: 3rem;
     margin-bottom: 20px;
   }
-  
-  .CardPurchases{
+
+  .CardPurchases {
     border-radius: 10px;
     box-shadow: rgb(237, 226, 226);
   }
 
-  .FlexImgs{
+  .FlexImgs {
     display: flex;
     align-items: center;
     gap: 1rem;
     margin-bottom: 30px;
   }
-  .Flex-Column{
-      display: flex;
-      flex-direction: column;
-     
+  .Flex-Column {
+    display: flex;
+    flex-direction: column;
   }
-  
-  .Total{
+
+  .Total {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 2rem;
     gap: 1rem;
   }
-  
-  .Trash{
+
+  .Trash {
     border: 0;
   }
-  
-  .Trash i{
+
+  .Trash i {
     color: #f85555;
   }
-  
-  .listasCart{
+
+  .listasCart {
     list-style-type: none;
   }
-  
-  .img-cart{
+
+  .img-cart {
     width: 70px;
   }
 }
@@ -556,8 +547,6 @@ i {
   i {
     color: white;
   }
-
-  
 
   .menu {
     width: 25%;
@@ -581,23 +570,17 @@ i {
     display: inherit;
   }
 
-  
-
   /* Cards Grid  */
 
   .Cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     place-items: center;
-    
-    
   }
 
-  
   .Card {
     border-radius: 10px;
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-
   }
 
   .Cards-General {
@@ -614,7 +597,6 @@ i {
   .Input {
     margin: 0 auto;
     display: block;
-  
   }
 
   .Description {
@@ -631,17 +613,20 @@ i {
     object-fit: contain;
   }
 
-  .Price-Buton{
-    background-color: #f85555;
+  .Price-Buton {
+    justify-content: space-between;
+     display: flex;
+    align-items: center;
   }
 
-  
+  .Parrafo-home {
+    font-size: 13px;
+  }
 
   .Columna {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
   }
 
   .Input-Flex {
@@ -650,18 +635,16 @@ i {
     padding: 3rem;
   }
 
-  .Filter-Category{
+  .Filter-Category {
     display: block;
   }
 
-  .Categorys{
+  .Categorys {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     padding: 2rem;
   }
-
-  
 
   /* Products  */
 
@@ -712,7 +695,7 @@ i {
     justify-content: center;
     padding: 1rem;
     width: 600px;
-   }
+  }
 
   .ButonComprar {
     width: 700px;
@@ -721,7 +704,6 @@ i {
     color: white;
     border: 0;
     cursor: pointer;
-    
   }
   /* Productos similares   */
 
@@ -806,176 +788,161 @@ i {
 
   /*Purchases */
 
-  .Contenedor-Purchases{
+  .Contenedor-Purchases {
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-   }
+  }
 
-
-  .Links{
+  .Links {
     text-decoration: none;
   }
 
-  .Titulo-purchases{
+  .Titulo-purchases {
     padding: 3rem;
     margin-bottom: 20px;
   }
 
-  .CardPurchases{
+  .CardPurchases {
     border-radius: 10px;
     box-shadow: rgb(237, 226, 226);
     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
   }
 
-  .Acordion{
+  .Acordion {
     width: 300px;
   }
 
-
-  .InputPrice{
-   display: flex;
-   align-items: center;
-   flex-direction: column;
-   justify-content: center;
-   margin-bottom: 10px;
+  .InputPrice {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
   }
-  .Buton-input{
+  .Buton-input {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     padding: 1rem;
-    
   }
-  .Buton-input button{
+  .Buton-input button {
     background-color: #f85555;
     color: white;
     border: 0;
     border-radius: 5px;
-    width:100px;
+    width: 100px;
     height: 30px;
   }
-   /* Input-Loding */
+  /* Input-Loding */
 
-   
-
-   .Contenedor-Formulario{
+  .Contenedor-Formulario {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-   
-   }
+  }
 
-   .Input-Registro{
-     padding: 4rem;
-     background-color: #fff;
-     width: 450px;
-     height: 500px;
-     display: block;
-     margin: 0 auto;
-     border-radius: 8px;
-     color: #1c1e21;
-     box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
-     
-    }
+  .Input-Registro {
+    padding: 4rem;
+    background-color: #fff;
+    width: 450px;
+    height: 500px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    color: #1c1e21;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  }
 
-    .Registro{
-        padding: 1rem;
-    }
-    /* Cart */
+  .Registro {
+    padding: 1rem;
+  }
+  /* Cart */
 
-    .img-cart{
-      width: 70px;
-    }
+  .img-cart {
+    width: 70px;
+  }
 
-    .Carrito{
-      margin-bottom: 50px;
-      
-    }
+  .Carrito {
+    margin-bottom: 50px;
+  }
 
-    .FlexImgs{
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      margin-bottom: 30px;
-    }
-    .Flex-Column{
-        display: flex;
-        flex-direction: column;
-       
-    }
+  .FlexImgs {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 30px;
+  }
+  .Flex-Column {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .Total{
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      padding: 2rem;
-      gap: 1rem;
-    }
+  .Total {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2rem;
+    gap: 1rem;
+  }
 
-    .Trash{
-      border: 0;
-    }
+  .Trash {
+    border: 0;
+  }
 
-    .Trash i{
-      color: #f85555;
-    }
+  .Trash i {
+    color: #f85555;
+  }
 
-    .listasCart{
-      list-style-type: none;
-    }
+  .listasCart {
+    list-style-type: none;
+  }
 
-    .Section-Buton{
-      
-      position: static;
-      text-align: center;
-      height: 200px;
-      position: relative;
-      bottom: -40px;
-      
-     
-    }
-    .ScrollCart{
-      overflow-y: scroll;
-      height: 400px;
-      }
+  .Section-Buton {
+    position: static;
+    text-align: center;
+    height: 200px;
+    position: relative;
+    bottom: -40px;
+  }
+  .ScrollCart {
+    overflow-y: scroll;
+    height: 400px;
+  }
 
+  .Total-Final {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 
-    .Total-Final{
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
+  .Buton-Comprar {
+    width: 300px;
+    height: 40px;
+    border: 0;
+    background-color: #f85555;
+    color: white;
+  }
 
-    .Buton-Comprar{
-      width: 300px;
-      height: 40px;
-      border: 0;
-      background-color: #f85555;
-      color: white;
-    }
+  .Buton-login {
+    margin-bottom: 20px;
+  }
 
-    .Buton-login{
-      margin-bottom: 20px;
-    }
+  .test {
+    padding: 1rem;
+    background-color: #f29b9b;
+    width: 400px;
+    border-radius: 8px;
+    height: 150px;
+  }
+  .test p {
+    margin-left: 30px;
+  }
 
-    .test{
-      padding: 1rem;
-      background-color: #f29b9b;
-      width: 400px;
-      border-radius: 8px;
-      height: 150px;
-    
-    }
-    .test p{
-      margin-left: 30px;
-    }
-
-    .Tes-data{
-      margin-bottom: 20px;
-      text-align: center;
-    }
-      
+  .Tes-data {
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
