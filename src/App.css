@@ -17,6 +17,9 @@ body{
 i {
   color: white;
 }
+.TitleNavar{
+    color: #f85555;
+}
 
 
 .Filter-Category{
@@ -311,6 +314,63 @@ i {
 .img-cart{
   width: 70px;
 }
+
+.ScrollCart{
+  overflow-y: scroll;
+  height: 400px;
+  }
+
+
+.Total-Final{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Buton-Comprar{
+  width: 200px;
+  height: 40px;
+  border: 0;
+  background-color: #f85555;
+  color: white;
+  
+}
+
+.Buton-COT{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Input Loding  */
+
+.Contenedor-Formulario{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  
+ 
+ }
+
+ .Input-Registro{
+   padding: 4rem;
+   background-color: #fff;
+   width: 300px;
+   height: 400px;
+   display: block;
+   margin: 0 auto;
+   border-radius: 8px;
+   color: #1c1e21;
+   box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+   
+  }
+
+  .Registro{
+      padding: 1rem;
+  }
+
+  
 
 
 
@@ -839,4 +899,35 @@ i {
     .listasCart{
       list-style-type: none;
     }
+
+    .Section-Buton{
+      
+      position: static;
+      text-align: center;
+      height: 200px;
+      position: relative;
+      bottom: -40px;
+      
+     
+    }
+    .ScrollCart{
+      overflow-y: scroll;
+      height: 400px;
+      }
+
+
+    .Total-Final{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    .Buton-Comprar{
+      width: 300px;
+      height: 40px;
+      border: 0;
+      background-color: #f85555;
+      color: white;
+    }
+      
 }

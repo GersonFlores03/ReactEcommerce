@@ -24,6 +24,14 @@ const Home = () => {
     }, [])
 
     console.log(category)
+
+    /*const HomeAddCart = (id) => {
+        const producto = {
+            productId: 1
+        }
+
+        dispatch(HomeAddthunkName(producto))
+    }*/
    
     return (
         <div className='Contenedor-General'>
@@ -106,7 +114,7 @@ const Home = () => {
                                                 <br />
                                                  Price $:
                                                {news.price}
-                                               <button className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
+                                               <button  className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
                                             </Card.Text>
                                             
 

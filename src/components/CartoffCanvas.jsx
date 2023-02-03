@@ -14,10 +14,10 @@ const CartoffCanvas = ({ show, handleClose }) => {
 
     //const {id} = useParams()
 
-    
+
 
     const cartProduct = useSelector(state => state.cartProduct)
-     
+
     /*useEffect(()=>{
         axios.delete(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/${id}`)
         .then(res =>{
@@ -28,7 +28,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
 
     //console.log(deleteProduct)
 
-   
+
 
     const dispatch = useDispatch()
 
@@ -40,7 +40,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
 
     const incrementNumber = () => {
         setCounterNumber(counterNumber + 1)
-        
+
 
     }
 
@@ -48,9 +48,9 @@ const CartoffCanvas = ({ show, handleClose }) => {
         setCounterNumber(counterNumber - 1)
     }
 
-    const totalProduct = () =>{
+    /*const totalProduct = () =>{
          
-    }
+    }*/
 
     return (
         <div>
@@ -59,11 +59,11 @@ const CartoffCanvas = ({ show, handleClose }) => {
                     <Offcanvas.Title>Cart</Offcanvas.Title>
                 </Offcanvas.Header>
                 <Offcanvas.Body>
-                    <button onClick={() => dispatch(getcheckthunkName())}>Comprar</button>
-                    <ul>
+
+                    <ul className='ScrollCart'>
                         {
                             cartProduct.map(cart => (
-                                <li className='listasCart' key={cart.product.id}>
+                                <div className='listasCart' key={cart.id}>
 
                                     <div className='Carrito'>
 
@@ -76,21 +76,36 @@ const CartoffCanvas = ({ show, handleClose }) => {
                                                 </div>
 
                                             </div>
-                                            <button onClick={()=> dispatch(getDeletethunkName(cart.id))} className='Trash'> <i className='bx bx-trash'></i> </button>
+                                            <button onClick={() => dispatch(getDeletethunkName(cart.id))} className='Trash'> <i className='bx bx-trash'></i> </button>
 
                                         </div>
 
                                         <div className='Total'>
 
                                             <p>Total:</p>
-                                            <p > ${cart.product.price} </p>
+                                            <p > ${ cart.product.price} </p>
+                                           
                                         </div>
 
                                     </div>
-                                </li>
+                                    
+                                </div>
+                                
                             ))
                         }
                     </ul>
+                    <hr />
+                    <div className='Section-Buton'>
+                    <div className='Total-Final'>
+                            <p>Total</p>
+                            <p>$ {counterNumber} </p>
+                           
+                         </div>
+                         <div className='Buton-COT'>  
+                        <button className='Buton-Comprar' onClick={() => dispatch(getcheckthunkName())}>Comprar</button>
+                        
+                        </div>
+                    </div>
                 </Offcanvas.Body>
             </Offcanvas>
 

@@ -33,7 +33,7 @@ const AppNavar = () => {
         <div className='Navegacion'>
             <Navbar className='Navbar' bg="dark" expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand as={Link} to="/" >Home</Navbar.Brand>
+                    <Navbar.Brand as={Link} to="/" > <span className='TitleNavar'>E-Commerce</span> </Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">

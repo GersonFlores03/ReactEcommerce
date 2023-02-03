@@ -39,7 +39,7 @@ const Login = () => {
                 <Form className='Contenedor-Formulario' onSubmit={handleSubmit(submit)}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
-                        <Form.Control className='Barra-Input' style={{ width: "25rem" }} type="email" placeholder="Enter email"
+                        <Form.Control className='Barra-Input' style={{ width: "15rem" }}  type="email" placeholder="Enter email"
                             {...register("email")} />
 
 
@@ -47,7 +47,7 @@ const Login = () => {
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control className='Barra-Input' style={{ width: "25rem" }} type="password" placeholder="Password"
+                        <Form.Control className='Barra-Input' style={{ width: "15rem" }} type="password" placeholder="Password"
                             {...register("password")} />
                     </Form.Group>
 
