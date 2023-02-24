@@ -9,15 +9,31 @@ import { getFilterthunkName, getfilterthunkTitle, getPricethunkName, getProducts
 const Home = () => {
     const [category, setCategory] = useState([])
     const [isInnput, setIsInnput] = useState("")
-    const [isprice, setIsprice] = useState("")
+    const [isprice, setIsprice] = useState(0)
+    const [isprice2, setIsprice2] = useState(0)
+    const [productFilter, setProductFilter] = useState([])
+    const newProducts = useSelector((state) => state.newProducts)
 
-    
+    useEffect(() => {
+        setProductFilter(newProducts)
+    }, [newProducts])
+
+    const range = () => {
+        const filterProductos = newProducts.filter((producto) => {
+            return +producto.price <= +isprice && +producto.price >= +isprice2
+        });
+        setProductFilter(filterProductos)
+    };
+
+
+
+
 
 
 
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const newProducts = useSelector(state => state.newProducts)
+    
     useEffect(() => {
         dispatch(getProductsThank());
 
@@ -25,67 +41,61 @@ const Home = () => {
             .then(res => setCategory(res.data))
     }, [])
 
-    //console.log(category)
+    
 
-    /*const HomeAddCart = (id) => {
-        const producto = {
-            productId: 1
-        }
-
-        dispatch(HomeAddthunkName(producto))
-    }*/
-   
     return (
         <div className='Contenedor-General'>
 
             <div className='Input-Flex' >
-              <div className='Filter-Category'> 
-            <Accordion className='Acordion' defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header>Price</Accordion.Header>
-                        <Accordion.Body>
-                              
+                <div className='Filter-Category'>
+                    <Accordion className='Acordion' defaultActiveKey="0">
+                        <Accordion.Item eventKey="0">
+                            <Accordion.Header>Price</Accordion.Header>
+                            <Accordion.Body>
+                            <form onSubmit={range}>
                               From <input className='InputPrice' type="text"
                               value={isprice} onChange={ e=>setIsprice(e.target.value)}
                               />
                                <div> 
                                To <input className='InputPrice' type="text"
-                               
-                                />
+                                value={isprice2} onChange={e =>setIsprice2(e.target.value)} />
+                                        
                                 </div>
                                 <div className='Buton-input'> 
-                                <button onClick={() => dispatch(getPricethunkName(isprice))}> Submit </button>
+                                  <button type='submit'> Submit</button>
                                 </div>
-                               
-                        </Accordion.Body>
-                    </Accordion.Item>
-                </Accordion>
+                                </form>
 
 
-                <Dropdown className='Categorys'>
+                            </Accordion.Body>
+                        </Accordion.Item>
+                    </Accordion>
 
-                    <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                        Category
 
-                    </Dropdown.Toggle>
-                    <hr className='Raya'/>
+                    <Dropdown className='Categorys'>
 
-                    <Dropdown.Menu>
+                        <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                            Category
 
-                        {
-                            category.map(cate => (
-                                <Dropdown.Item key={cate.id} onClick={() => dispatch(getFilterthunkName(cate.id))} >
-                                    {cate.name}
-                                </Dropdown.Item>
-                            ))
-                        }
+                        </Dropdown.Toggle>
+                        <hr className='Raya' />
 
-                    </Dropdown.Menu>
-                </Dropdown>
+                        <Dropdown.Menu>
+
+                            {
+                                category.map(cate => (
+                                    <Dropdown.Item key={cate.id} onClick={() => dispatch(getFilterthunkName(cate.id))} >
+                                        {cate.name}
+                                    </Dropdown.Item>
+                                ))
+                            }
+
+                        </Dropdown.Menu>
+                    </Dropdown>
 
                 </div>
 
-               
+
 
                 <div className='Input-Contenedor'>
 
@@ -103,27 +113,27 @@ const Home = () => {
 
                     <div className='Cards'>
                         {
-                            newProducts.map(news => (
+                            productFilter.map(news => (
                                 <div className='CardsComponentes' key={news.id} onClick={() => navigate(`/product/${news.id}`)} >
-                                    <Card className='Card' style={{ width: '18rem' , height:"23rem" }}>
-                                        <Card.Img variant="top" src={news.images?.[0].url} 
-                                        style={{ width: "150px", height: "160px", objectFit: "contain", margin: "0 auto", padding: "1rem" }} />
+                                    <Card className='Card' style={{ width: '18rem', height: "23rem" }}>
+                                        <Card.Img variant="top" src={news.images?.[0].url}
+                                            style={{ width: "150px", height: "160px", objectFit: "contain", margin: "0 auto", padding: "1rem" }} />
                                         <hr />
                                         <Card.Body>
                                             <Card.Title> {news.brand}  </Card.Title>
                                             <Card.Text className='Title'>
-                                                <div className='Description'>  
-                                                <p className='Parrafo-home'>{news.title} </p>
-                                             
+                                                <div className='Description'>
+                                                    <p className='Parrafo-home'>{news.title} </p>
+
                                                 </div>
-                                                
-                                                 Price $:
-                                                <div className='Price-Buton'>  
-                                               <b> {news.price} </b> 
-                                               <button  className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
-                                               </div>
+
+                                                Price $:
+                                                <div className='Price-Buton'>
+                                                    <b> {news.price} </b>
+                                                    <button className='AddCart'> <i className='bx bx-cart bx-sm' ></i> </button>
+                                                </div>
                                             </Card.Text>
-                                            
+
 
                                         </Card.Body>
                                     </Card>
