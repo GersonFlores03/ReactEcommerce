@@ -1,8 +1,10 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import swal from 'sweetalert';
+
 
 const Login = () => {
 
@@ -10,17 +12,28 @@ const Login = () => {
 
     const navigate = useNavigate();
 
+    
+
     const submit = (data) => {
         console.log(data)
         axios.post(`https://e-commerce-api-v2.academlo.tech/api/v1/users/login`, data)
             .then(res => {
-
                 localStorage.setItem("token", res.data.token)
                 navigate("/")
+                swal({
+                    title: "Welcome",
+                    icon: "success",
+                    timer:"1500",
+                   })
+               
             })
             .catch(error => {
                 if (error.response.status === 401) {
-                    alert("Credencial Incorrecta")
+                    swal({
+                        title: "Incorrect Data",
+                        icon: "error",
+                        timer:"1500",
+                       })
                 }
                 console.log(error)
             })
@@ -58,8 +71,15 @@ const Login = () => {
                          <h5 className='Tes-data'>Test data</h5>
                         
                          <p> <i className='bx bx-envelope'></i> john@gmail.com</p>
-                         <p> <i className='bx bx-lock-alt'></i> john1234</p>   
+                         <p> <i className='bx bx-lock-alt'></i> john1234 </p>
+                         <p>
+                            importante: 
+                              Copia el correo y escribe la 
+                            contraseña o crea una nueva cuenta !Gracias!
+                         </p>
+                            
                     </div>
+                    <p className='NuevaCuenta'><Link className='link' to={"/signup"} ><span className='LinkSpan'> Create new account</span> </Link></p>
                 </Form>
             </div>
             <footer className='Footer'>

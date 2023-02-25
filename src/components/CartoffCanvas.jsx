@@ -7,14 +7,14 @@ import { getCartProductsthunkName, getcheckthunkName, getDeletethunkName, Modifi
 
 
 const CartoffCanvas = ({ show, handleClose }) => {
-    
+
 
 
 
     const cartProduct = useSelector(state => state.cartProduct)
 
     let total = 0
-    cartProduct.forEach(product =>{
+    cartProduct.forEach(product => {
         const productoTotal = Number(product.product.price) * product.quantity;
         total += productoTotal
     })
@@ -30,16 +30,16 @@ const CartoffCanvas = ({ show, handleClose }) => {
     console.log(cartProduct)
 
     const incrementNumber = (cart) => {
-        dispatch(ModificarthunkName(cart.id , cart.quantity + 1))
+        dispatch(ModificarthunkName(cart.id, cart.quantity + 1))
 
 
     }
 
     const decrementNumber = (cart) => {
-        dispatch(ModificarthunkName(cart.id , cart.quantity -1))
+        dispatch(ModificarthunkName(cart.id, cart.quantity - 1))
     }
 
-    
+
 
     return (
         <div>
@@ -61,7 +61,7 @@ const CartoffCanvas = ({ show, handleClose }) => {
                                             <div className='Flex-Column'>
                                                 <h5> {cart.product.brand} </h5>
                                                 <div>
-                                                    <button className='ContadorCart'  onClick={()=> (decrementNumber(cart))}> - </button> <button className='Counter'> {cart.quantity} </button><button className='ContadorCart' onClick={()=> incrementNumber(cart)}> + </button>
+                                                    <button className='ContadorCart' onClick={() => (decrementNumber(cart))}> - </button> <button className='Counter'> {cart.quantity} </button><button className='ContadorCart' onClick={() => incrementNumber(cart)}> + </button>
                                                 </div>
 
                                             </div>
@@ -72,27 +72,27 @@ const CartoffCanvas = ({ show, handleClose }) => {
                                         <div className='Total'>
 
                                             <p>Total:</p>
-                                            <p > ${ cart.product.price} </p>
-                                           
+                                            <p > ${cart.product.price} </p>
+
                                         </div>
 
                                     </div>
-                                    
+
                                 </li>
-                                
+
                             ))
                         }
                     </ul>
                     <hr />
                     <div className='Section-Buton'>
-                    <div className='Total-Final'>
+                        <div className='Total-Final'>
                             <p>Total:</p>
                             <p>$ {total} </p>
-                           
-                         </div>
-                         <div className='Buton-COT'>  
-                        <button className='Buton-Comprar' onClick={() => dispatch(getcheckthunkName())}>Comprar</button>
-                        
+
+                        </div>
+                        <div className='Buton-COT'>
+                            <button className='Buton-Comprar' onClick={() => dispatch(getcheckthunkName())}>Comprar</button>
+
                         </div>
                     </div>
                 </Offcanvas.Body>

@@ -12,10 +12,15 @@ body {
 
 .Navbar {
   width: 100%;
+ 
 }
 
-i {
+i{
   color: white;
+}
+
+.icon:hover{
+  color:#f85555 ;
 }
 .TitleNavar {
   color: #f85555;
@@ -355,8 +360,8 @@ i {
 .Input-Registro {
   padding: 4rem;
   background-color: #fff;
-  width: 300px;
-  height: 500px;
+  width: 320px;
+  height: 650px;
   display: block;
   margin: 0 auto;
   border-radius: 8px;
@@ -366,14 +371,17 @@ i {
 
 .Registro {
   padding: 1rem;
+  text-align: center;
 }
 
 .test {
   padding: 1rem;
   background-color: #f29b9b;
-  width: 250px;
+  width: 300px;
+  
+  margin-bottom: 20px;
   border-radius: 8px;
-  height: 150px;
+  height: 240px;
 }
 .test p {
   margin-left: 30px;
@@ -385,7 +393,103 @@ i {
 }
 .Buton-login {
   margin-bottom: 20px;
+ border-radius: 8px;
 }
+
+/* Creacion de cuenta */
+
+.NuevaCuenta{
+  background-color: #48d32c;
+  color: wheat;
+  list-style-type: none;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 8px;
+ }
+
+ .link{
+    text-decoration: none;
+ }
+
+ .LinkSpan{
+  color: white;
+ }
+
+ .Registro-Nuevo{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 600px;
+ }
+
+ .Formulario{
+  background-color: rgb(237, 235, 235);
+  box-shadow: 2px 2px 8px rgba(0,0,0);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 320px;
+  height: 450px;
+ }
+
+ .Contenedor-Dates{
+  margin-bottom: 15px;
+ }
+
+ .Contenedor-Dates input {
+     width: 200px;
+     height: 30px;
+     border: 0;
+  } 
+
+
+
+ .ButonRegistro{
+  width: 150px;
+  height: 30px;
+  border-radius: 8px;
+  border: 0;
+  color: white;
+  background-color: #47c12e;
+ }
+
+ .Contenido-Usuario{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 600px;
+ }
+
+ .Usuarios{
+  background-color: rgb(237, 235, 235);
+  border-radius: 8px;
+  box-shadow: 2px 2px 8px rgba(0,0,0);
+  width: 320px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+ }
+
+ .Mi-Usuario{
+  background-color: grey;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+}
+
+.Cerrar-sesion{
+  color: rgb(26, 104, 171);
+}
+
 
 /*  Media queris  */
 
@@ -535,6 +639,120 @@ i {
 
   .img-cart {
     width: 70px;
+  }
+
+  .Input-Registro {
+    padding: 4rem;
+    background-color: #fff;
+    width: 400px;
+    height: 650px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+    color: #1c1e21;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+  }
+
+  .test {
+    padding: 1rem;
+    background-color: #f29b9b;
+    width: 350px;
+    
+    margin-bottom: 20px;
+    border-radius: 8px;
+    height: 240px;
+  }
+
+  .NuevaCuenta{
+    background-color: #48d32c;
+    color: wheat;
+    list-style-type: none;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+   }
+  
+   .link{
+      text-decoration: none;
+   }
+  
+   .LinkSpan{
+    color: white;
+   }
+  
+   .Registro-Nuevo{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 600px;
+   }
+  
+   .Formulario{
+    background-color: rgb(237, 235, 235);
+    box-shadow: 2px 2px 8px rgba(0,0,0);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 400px;
+    height: 450px;
+   }
+  
+   .Contenedor-Dates{
+    margin-bottom: 15px;
+   }
+  
+   .Contenedor-Dates input {
+       width: 200px;
+       height: 30px;
+       border: 0;
+    } 
+  
+  
+  
+   .ButonRegistro{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    color: white;
+    background-color: #47c12e;
+   }
+  
+   .Contenido-Usuario{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 600px;
+   }
+  
+   .Usuarios{
+    background-color: rgb(237, 235, 235);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0);
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+  
+   .Mi-Usuario{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+  }
+  
+  .Cerrar-sesion{
+    color: rgb(26, 104, 171);
   }
 }
 
@@ -848,7 +1066,7 @@ i {
     padding: 4rem;
     background-color: #fff;
     width: 450px;
-    height: 500px;
+    height: 620px;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
@@ -858,6 +1076,7 @@ i {
 
   .Registro {
     padding: 1rem;
+    text-align: center;
   }
   /* Cart */
 
@@ -935,7 +1154,9 @@ i {
     background-color: #f29b9b;
     width: 400px;
     border-radius: 8px;
-    height: 150px;
+    height: 220px;
+    margin-bottom: 15px;
+    
   }
   .test p {
     margin-left: 30px;
@@ -945,4 +1166,103 @@ i {
     margin-bottom: 20px;
     text-align: center;
   }
+  /* Creacion de cuenta */
+
+  .NuevaCuenta{
+    background-color: #48d32c;
+    color: wheat;
+    list-style-type: none;
+    height: 50px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 8px;
+   }
+
+   .link{
+      text-decoration: none;
+   }
+
+   .LinkSpan{
+    color: white;
+   }
+
+   .Registro-Nuevo{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 600px;
+   }
+
+   .Formulario{
+    background-color: rgb(237, 235, 235);
+    box-shadow: 2px 2px 8px rgba(0,0,0);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    width: 400px;
+    height: 450px;
+   }
+
+   .Contenedor-Dates{
+    margin-bottom: 15px;
+   }
+
+   .Contenedor-Dates input {
+       width: 200px;
+       height: 30px;
+       border: 0;
+    } 
+
+  
+
+   .ButonRegistro{
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    color: white;
+    background-color: #47c12e;
+   }
+
+   .Contenido-Usuario{
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 600px;
+   }
+
+   .Usuarios{
+    background-color: rgb(237, 235, 235);
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0,0,0);
+    width: 400px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+
+   .Mi-Usuario{
+    background-color: grey;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: 12px;
+  }
+
+  .Cerrar-sesion{
+    color: rgb(26, 104, 171);
+  }
+
+   
+
+
+
+   
 }

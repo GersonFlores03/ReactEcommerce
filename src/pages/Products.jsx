@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Button, Card, Carousel } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
+import swal from 'sweetalert';
 import { getAddFavoritethunkName } from '../store/slice/cartProduct.slice';
 import { getFilterthunkName } from '../store/slice/newProducts.slice';
 
@@ -13,8 +14,7 @@ const Products = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [counter, setCounter] = useState(1)
-    const [state, setState] = useState(1)
-    //const newFilterProducts = newProductss.filter(news => news.id !== Number(id))
+    
 
     const newProducts = useSelector(state => state.newProducts)
 
@@ -24,6 +24,7 @@ const Products = () => {
             .then(res => {
                 setIsDetalles(res.data)
                 dispatch(getFilterthunkName(res.data.category.id))
+               
             })
 
     }, [id])
@@ -44,8 +45,14 @@ const Products = () => {
         const raw = {
             quantity: counter,
             productId: isDetalles.id,
+            
 
         }
+        swal({
+            title: "Acquired",
+            icon: "success",
+            timer:"1500",
+           })
 
         dispatch(getAddFavoritethunkName(raw))
     }

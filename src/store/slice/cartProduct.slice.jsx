@@ -25,7 +25,11 @@ export const getAddFavoritethunkName = (raw) => (dispatch) => {
        dispatch(setloadings(true));
        return axios.post(`https://e-commerce-api-v2.academlo.tech/api/v1/cart/`, raw , getConfig())
         .then(() => dispatch(getCartProductsthunkName()))
-        .catch(()=>alert("hubo un error"))
+        .catch(()=> swal({
+            title: "Login Please",
+            icon: "error",
+            timer:"1500",
+           }))
         .finally(() => dispatch(setloadings(false)));
 }
 
@@ -33,7 +37,7 @@ export const getAddFavoritethunkName = (raw) => (dispatch) => {
 export const getcheckthunkName = () => (dispatch) => {
     dispatch(setloadings(true));
     return axios.post(`https://e-commerce-api-v2.academlo.tech/api/v1/purchases/` , [] , getConfig())
-        .then(() => dispatch(setCartProduct([])))
+        .then(() =>  dispatch(setCartProduct([])) )
         .finally(() => dispatch(setloadings(false)));
 }
 

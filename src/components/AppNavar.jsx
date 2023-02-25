@@ -13,7 +13,7 @@ const AppNavar = () => {
 
 
 
-    const navigate = useNavigate();
+    //const navigate = useNavigate();
 
     const [show, setShow] = useState(false);
 
@@ -22,10 +22,8 @@ const AppNavar = () => {
 
 
 
-    const logaut = () => {
-        localStorage.setItem("token", "")
-        navigate("/login")
-    }
+
+    
 
 
 
@@ -37,10 +35,20 @@ const AppNavar = () => {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link as={Link} to="/login" >Login</Nav.Link>
-                            <Nav.Link as={Link} to="/purchases" >Purchases</Nav.Link>
-                            <Nav.Link onClick={handleShow}> Cart</Nav.Link>
-                            <Nav.Link onClick={logaut} >Log out</Nav.Link>
+                            <Nav.Link as={Link} to="/login" >
+                            <i className='bx bxs-log-in bx-sm icon' ></i>
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/purchases" >
+                            <i className='bx bx-store bx-sm icon'></i>
+                            </Nav.Link>
+                            <Nav.Link onClick={handleShow}>
+                            <i className='bx bx-cart bx-sm icon' ></i>
+                            </Nav.Link>
+                            <Nav.Link as={Link} to="/user" > 
+                            <i className='bx bxs-user-circle bx-sm icon' ></i>
+                             </Nav.Link>
+                           
+                            
 
                         </Nav>
                     </Navbar.Collapse>
