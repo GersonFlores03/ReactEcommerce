@@ -9,8 +9,8 @@ import { getFilterthunkName, getfilterthunkTitle, getPricethunkName, getProducts
 const Home = () => {
     const [category, setCategory] = useState([])
     const [isInnput, setIsInnput] = useState("")
-    const [isprice, setIsprice] = useState(0)
-    const [isprice2, setIsprice2] = useState(0)
+    const [sum, setSum] = useState(0)
+    const [res, setRes] = useState(0)
     const [productFilter, setProductFilter] = useState([])
     const newProducts = useSelector((state) => state.newProducts)
 
@@ -20,7 +20,7 @@ const Home = () => {
 
     const range = () => {
         const filterProductos = newProducts.filter((producto) => {
-            return +producto.price <= +isprice && +producto.price >= +isprice2
+            return +producto.price <= +sum && +producto.price >= +res
         });
         setProductFilter(filterProductos)
     };
@@ -54,11 +54,11 @@ const Home = () => {
                             <Accordion.Body>
                             <form onSubmit={range}>
                               From <input className='InputPrice' type="text"
-                              value={isprice} onChange={ e=>setIsprice(e.target.value)}
+                              value={sum} onChange={ e=>setSum(e.target.value)}
                               />
                                <div> 
                                To <input className='InputPrice' type="text"
-                                value={isprice2} onChange={e =>setIsprice2(e.target.value)} />
+                                value={res} onChange={e =>setRes(e.target.value)} />
                                         
                                 </div>
                                 <div className='Buton-input'> 

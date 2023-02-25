@@ -8,18 +8,18 @@ const User = () => {
 
     const isSignup = useSelector(state => state.isSignup)
 
-   
-    
+
+
     const dispatch = useDispatch();
 
     const navigate = useNavigate();
 
-    useEffect(()=>{
+    useEffect(() => {
         dispatch(getloadethunkName())
-    },[])
-  
-      const ultimo = isSignup[isSignup.length-1] 
-      console.log(ultimo)
+    }, [])
+
+    const ultimo = isSignup[isSignup.length - 1]
+    console.log(ultimo)
 
     console.log(isSignup)
 
@@ -28,22 +28,22 @@ const User = () => {
         navigate("/login")
     }
 
-   
+
 
     return (
         <div className='Contenedor-User'>
-            <div className='Contenido-Usuario'> 
-            <div className='Usuarios'>
-             <section className='Mi-Usuario'>
-             <i className='bx bx-user bx-lg'></i>
-             </section>
-            <h4> {ultimo?.firstName} </h4>
-            <p>
-            <Nav className="me-auto">
-            <Nav.Link onClick={logaut} > <span className='Cerrar-sesion'> Cerrar sesion </span></Nav.Link>
-            </Nav>
-            </p>
-            </div>
+            <div className='Contenido-Usuario'>
+                <div className='Usuarios'>
+                    <section className='Mi-Usuario'>
+                        <i className='bx bx-user bx-lg'></i>
+                    </section>
+                    <h4> {ultimo?.firstName} </h4>
+                    <p>
+                        <Nav className="me-auto">
+                            <Nav.Link onClick={logaut} > <span className='Cerrar-sesion'> Cerrar sesion </span></Nav.Link>
+                        </Nav>
+                    </p>
+                </div>
             </div>
 
             <footer className='Footer'>

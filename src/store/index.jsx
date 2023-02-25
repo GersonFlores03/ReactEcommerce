@@ -11,6 +11,6 @@ export default configureStore({
             newProducts : newProductsSlice,
             purchases: purchasesSlice,
             cartProduct: cartProductSlice,
-            isSignup: isSignupSlice,
+            isSignup: isSignupSlice
     }
 })

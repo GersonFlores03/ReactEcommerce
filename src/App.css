@@ -537,12 +537,10 @@ i{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    margin: 0 auto;
-    padding: 0;
-    gap: 0;
-  }
+    flex-direction: row;
+    }
 
-  .Boton {
+  .Boton{
     display: flex;
     align-items: center;
     justify-content: flex-start;

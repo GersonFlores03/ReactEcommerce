@@ -14,7 +14,7 @@ const Products = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [counter, setCounter] = useState(1)
-    
+
 
     const newProducts = useSelector(state => state.newProducts)
 
@@ -24,7 +24,7 @@ const Products = () => {
             .then(res => {
                 setIsDetalles(res.data)
                 dispatch(getFilterthunkName(res.data.category.id))
-               
+
             })
 
     }, [id])
@@ -41,18 +41,18 @@ const Products = () => {
 
     }
 
-    const addCart = (id) => {
+    const addCart = () => {
         const raw = {
             quantity: counter,
             productId: isDetalles.id,
-            
+
 
         }
         swal({
             title: "Acquired",
             icon: "success",
-            timer:"1500",
-           })
+            timer: "1500",
+        })
 
         dispatch(getAddFavoritethunkName(raw))
     }
